@@ -1,4 +1,4 @@
-#### How git works
+## How git works
 
 - it stores references to **snapshots** of the data instead of list of file-based changes
 - if there is no change in a file Git stores a **link** to the previous identical file
@@ -7,7 +7,7 @@
 - it’s impossible to change the contents of any file or directory without Git knowing about it because everything is **check-summed** before it is stored
 - it's hard to loose changes because nearly all Git actions **add data** to the Git database
 
-#### The 3 States
+## The 3 States
 
 Git has three states:
 
