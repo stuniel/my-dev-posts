@@ -23,7 +23,7 @@ React.Children.map(this.props.children, (child) => {
 
 #### React context
 
-* there are 3 steps to create and pass context:  
+There are 3 steps to create and pass context:  
 1. Telling the parent component that we are providing it with context:  
 ```jsx
 static childContextTypes = {  
@@ -47,4 +47,28 @@ static contextTypes = {
 * now we can use the context:  
 ```jsx
 const propName = this.context.propName
+```
+
+#### Reusability
+
+Make your components as reusable as possible. The main idea of a compononent is to be used in multiple projects so it is a good practice to create universal naming, limit the component to manage its own data ad rather let the parent to do it.
+
+#### Render Props
+
+Component can return React element but it is also possible to return a function. When this function lives in state we are able to pass it via this component.
+
+```jsx
+//This is what our RenderComponent returns
+
+render() {
+  return this.props.render(this.state.data)
+}
+```
+
+```jsx
+//This is how we use our component
+
+<RenderComponent render={data => {
+  <h1>{data.header}</h1>
+}}/>
 ```
