@@ -77,7 +77,7 @@ render() {
 
 When we map some array values we can store refs of created elements in a single array.
 
-```
+```jsx
 class MyComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -96,7 +96,7 @@ class MyComponent extends React.Component {
     Array.from(this._nodes.values())
       .filter(node => node != null)
       .forEach(node => {
-          // do something with node
+        // do something with node
       });
   }
   render() {
@@ -111,4 +111,4 @@ class MyComponent extends React.Component {
   }
 }
 ```
-source: https://github.com/facebook/react/issues/1899#issuecomment-234485054
+[source](https://github.com/facebook/react/issues/1899#issuecomment-234485054)
